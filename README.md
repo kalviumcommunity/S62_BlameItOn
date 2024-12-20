@@ -64,3 +64,9 @@ This project was chosen because it combines creativity with technical developmen
 
 - Enhance skills in database management, user authentication, and community-driven application design.
 - Learn how to implement gamification elements like leaderboards and reward systems.
+
+---
+
+### Render Deployment Link:
+
+https://s62-blameiton.onrender.com
