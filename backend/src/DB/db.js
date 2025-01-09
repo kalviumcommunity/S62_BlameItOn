@@ -6,7 +6,9 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   });
 }
 
-const DB_URL = process.env.DB_URL;
+const DB_URL =
+  process.env.DB_URL ||
+  "mongodb+srv://Nidhish_Agarwal:Nidhish64364488@cluster0.tqv0w.mongodb.net/BlameItOn";
 
 var mongoclient = new MongoClient(DB_URL);
 

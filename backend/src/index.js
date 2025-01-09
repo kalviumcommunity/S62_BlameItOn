@@ -6,25 +6,13 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 const app = require("./server.js");
 const connectDatabase = require("./DB/database.js");
-const { connectDB, getDB } = require("./DB/db.js");
+const { connectDB } = require("./DB/db.js");
 
-const PORT = process.env.PORT;
-
-connectDB();
-
-app.get("/", async (req, res) => {
-  try {
-    const db = getDB();
-    const users = await db.collection("Users").find().toArray();
-    res.status(200).json(users);
-  } catch (error) {
-    console.log("Error fetching users", error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
-});
+const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
-  connectDatabase();
+  // connectDatabase();
+  connectDB();
   console.log(
     `Server is running in port: ${PORT}, link: http://localhost:${PORT}`
   );
