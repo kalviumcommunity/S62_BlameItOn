@@ -70,3 +70,7 @@ This project was chosen because it combines creativity with technical developmen
 ### Render Deployment Link:
 
 https://s62-blameiton.onrender.com
+
+## CloudFare Deployment Link:
+
+https://b486d877.s62-blameiton.pages.dev
