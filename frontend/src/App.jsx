@@ -5,6 +5,7 @@ import "./App.css";
 import HomePage from "./Pages/HomePage";
 import ExcuseList from "./Pages/ExcuseList.jsx";
 import { Routes, Route } from "react-router-dom";
+import UsersList from "./Pages/UserList.jsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/excuse" element={<ExcuseList />}></Route>
+        <Route path="/users" element={<UsersList />}></Route>
       </Routes>
     </>
   );
