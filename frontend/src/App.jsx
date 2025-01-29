@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage";
 import ExcuseList from "./Pages/ExcuseList.jsx";
 import { Routes, Route } from "react-router-dom";
 import UsersList from "./Pages/UserList.jsx";
+import AddUser from "./Pages/AddUser.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/excuse" element={<ExcuseList />}></Route>
         <Route path="/users" element={<UsersList />}></Route>
+        <Route path="/add-user" element={<AddUser />}></Route>
       </Routes>
     </>
   );

@@ -1,14 +1,13 @@
 const MongoClient = require("mongodb").MongoClient;
 
+const path = require("path");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
-    path: "../config/.env",
+    path: path.resolve(__dirname, "../config/.env"),
   });
 }
 
-const DB_URL =
-  process.env.DB_URL ||
-  "mongodb+srv://Nidhish_Agarwal:Nidhish64364488@cluster0.tqv0w.mongodb.net/BlameItOn";
+const DB_URL = process.env.DB_URL;
 
 var mongoclient = new MongoClient(DB_URL);
 
