@@ -1,5 +1,6 @@
 const { getDB } = require("../DB/db.js");
 const { ObjectId } = require("mongodb");
+const userModel = require("../models/users.model.js");
 
 const getUsersController = async (req, res) => {
   const db = getDB();
@@ -13,10 +14,11 @@ const getUsersController = async (req, res) => {
 };
 
 const addUserController = async (req, res) => {
-  const db = getDB();
   try {
     const newUser = req.body;
-    const result = await db.collection("Users").insertOne(newUser);
+
+    const result = await userModel.create(newUser);
+
     res.status(201).json({ message: "User added successfully", data: result });
   } catch (er) {
     res
