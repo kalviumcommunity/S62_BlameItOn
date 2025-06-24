@@ -5,7 +5,7 @@ const userModel = require("../models/users.model.js");
 const getUsersController = async (req, res) => {
   const db = getDB();
   try {
-    const users = await db.collection("Users").find().toArray();
+    const users = await db.collection("users").find().toArray();
     res.status(200).json(users);
   } catch (error) {
     console.log("Error fetching users", error);
