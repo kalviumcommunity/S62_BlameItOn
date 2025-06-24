@@ -10,7 +10,7 @@ const UsersList = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/users/get-users"
+          "https://s62-blameiton-1.onrender.com/users/get-users"
         );
         setUsers(response.data);
         setLoading(false);

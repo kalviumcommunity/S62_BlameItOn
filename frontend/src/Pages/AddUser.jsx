@@ -21,7 +21,7 @@ const AddUser = () => {
     console.log("User Data:", user);
 
     const response = await axios
-      .post("http://localhost:8080/users/create-user", user)
+      .post("https://s62-blameiton-1.onrender.com/users/create-user", user)
       .then(() => {
         console.log("Sucessfully added the user");
         navigate("/");
